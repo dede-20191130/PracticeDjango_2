@@ -4,4 +4,4 @@ mybook/static/mybook/js/jquery* linguist-vendored
 mybook/static/mybook/css/bootstap* vendored
 mybook/static/mybook/js/bootstap* vendored
 mybook/static/mybook/js/jquery* vendored
-mybook/static/mybook/* vendored
+mybook/static/mybook/* linguist-vendored
