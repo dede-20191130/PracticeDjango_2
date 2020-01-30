@@ -1,0 +1,4 @@
+/db.sqlite3
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+db.sqlite3
