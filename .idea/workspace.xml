@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="455cbdb3-18ff-437e-85cd-58fd48333a51" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+    <list default="true" id="455cbdb3-18ff-437e-85cd-58fd48333a51" name="Default Changelist" comment="20200130_1829">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +68,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.idea" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager" selected="Django server.PracticeDjango_2">
@@ -174,7 +174,8 @@
       <updated>1580234586844</updated>
       <workItem from="1580234590041" duration="3391000" />
       <workItem from="1580301036537" duration="10015000" />
-      <workItem from="1580375863956" duration="673000" />
+      <workItem from="1580375863956" duration="1019000" />
+      <workItem from="1580377002723" duration="89000" />
     </task>
     <task id="LOCAL-00001" summary="20200130_1818">
       <created>1580375883046</created>
@@ -190,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580375912205</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="20200130_1829">
+      <created>1580376589155</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1580376589155</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,7 +206,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="20200130_1818" />
-    <option name="LAST_COMMIT_MESSAGE" value="20200130_1818" />
+    <MESSAGE value="20200130_1829" />
+    <option name="LAST_COMMIT_MESSAGE" value="20200130_1829" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="179" key="#Notifications" timestamp="1580375600984">
@@ -213,14 +222,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="721" y="324" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1580235847060" />
-    <state x="586" y="115" key="CommitChangelistDialog2" timestamp="1580375911686">
+    <state x="586" y="115" key="CommitChangelistDialog2" timestamp="1580377098921">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="586" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1580375911686" />
-    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1580375677275">
+    <state x="586" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1580377098921" />
+    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1580376879077">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1580375677275" />
+    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1580376879077" />
     <state x="831" y="414" key="Github.ShareDialog" timestamp="1580375990195">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -241,10 +250,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1580375851106" />
-    <state x="468" y="163" key="SettingsEditor" timestamp="1580375804049">
+    <state x="468" y="163" key="SettingsEditor" timestamp="1580376622455">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="468" y="163" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1580375804049" />
+    <state x="468" y="163" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1580376622455" />
     <state x="681" y="261" width="696" height="524" key="StructurePopup" timestamp="1580374579591">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -257,10 +266,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1580375891535" />
-    <state x="634" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1580375863967">
+    <state x="634" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1580377002434">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="634" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580375863967" />
+    <state x="634" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580377002434" />
     <state x="595" y="252" width="729" height="536" key="find.popup" timestamp="1580236614305">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
