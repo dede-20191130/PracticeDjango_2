@@ -1,7 +1,4 @@
-mybook/static/mybook/css/bootstap* linguist-vendored
-mybook/static/mybook/js/bootstap* linguist-vendored
+mybook/static/mybook/css/bootstrap* linguist-vendored
+mybook/static/mybook/js/bootstrap* linguist-vendored
 mybook/static/mybook/js/jquery* linguist-vendored
-mybook/static/mybook/css/bootstap* vendored
-mybook/static/mybook/js/bootstap* vendored
-mybook/static/mybook/js/jquery* vendored
-mybook/static/mybook/* linguist-vendored
+#mybook/static/mybook/* linguist-vendored
