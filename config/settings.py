@@ -35,9 +35,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'mybook.apps.mybookConfig',
     'bootstrap4',
-    'api.apps.ApiConfig'
+    'rest_framework',
+    'django_filters',
+    'mybook.apps.mybookConfig',
+    'api.apps.ApiConfig',
+    'blog'
 ]
 
 MIDDLEWARE = [
@@ -117,3 +120,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+}
