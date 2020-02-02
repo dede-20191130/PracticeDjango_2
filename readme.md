@@ -1,0 +1,1 @@
+This is only practice for Web Application made by Django.
