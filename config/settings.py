@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django_filters',
     'mybook.apps.mybookConfig',
     'api.apps.ApiConfig',
-    'blog'
+    'blog',
+    'ajax_prac_1',
 ]
 
 MIDDLEWARE = [

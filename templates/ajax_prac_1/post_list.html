@@ -1,0 +1,114 @@
+{% extends 'ajax_prac_1/base.html' %}
+
+{% block content %}
+    <h2>記事一覧</h2>
+    <div id="posts">
+        {% for post in post_list %}
+            <p>{{ post.title }}</p>
+        {% endfor %}
+    </div>
+
+    <hr>
+
+    <h2>記事の追加</h2>
+    <form id="ajax-add-post" action="{% url 'ajax_prac_1:ajax_post_add' %}" method="POST">
+        <input type="text" id="id_title" required>
+        <button type="submit">送信</button>
+        {% csrf_token %}
+    </form>
+
+     <hr>
+
+    <h2>記事の検索</h2>
+    <form id="ajax-search-post" action="{% url 'ajax_prac_1:ajax_post_search' %}" method="GET">
+        <input type="text" id="id_title_search" required>
+        <button type="submit">検索</button>
+    </form>
+
+{% endblock %}
+
+{% block extrajs %}
+    <script>
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                let cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    let cookie = jQuery.trim(cookies[i]);
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+
+        let csrftoken = getCookie('csrftoken');
+
+        function csrfSafeMethod(method) {
+            // these HTTP methods do not require CSRF protection
+            return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+        }
+
+        $.ajaxSetup({
+            cache: false,
+            beforeSend: function (xhr, settings) {
+                if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                    xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                }
+            }
+        });
+
+        // 送信ボタンで呼ばれる
+        $('#ajax-add-post').on('submit', e => {
+            // デフォルトのイベントをキャンセルし、ページ遷移しないように!
+            e.preventDefault();
+
+            $.ajax({
+                'url': '{% url "ajax_prac_1:ajax_post_add" %}',
+                'type': 'POST',
+                'data': {
+                    'title': $('#id_title').val(),  // 記事タイトル
+                },
+                'dataType': 'json'
+            }).done(response => {
+                // <p>はろー</p>のような要素を作成し、それを記事一覧エリアに追加し、入力欄をクリアする。
+                const p = $('<p>', {text: response.title});
+                $('#posts').prepend(p);
+                $('#id_title').val('');
+            });
+
+        });
+
+        // 検索ボタンで呼ばれる
+        $('#ajax-search-post').on('submit', e => {
+            // デフォルトのイベントをキャンセルし、ページ遷移しないように!
+            e.preventDefault();
+
+            $.ajax({
+                'url': '{% url "ajax_prac_1:ajax_post_search" %}',
+                'type': 'GET',
+                'data': {
+                    'title': $('#id_title_search').val(),  // 記事タイトル
+                },
+                'dataType': 'json'
+            }).done(response => {
+                // 記事欄を真っ白にする。
+                $('#posts').empty();
+
+                // タイトルの一覧を順に取り出す
+                for (const title of response.title_list) {
+                    // <p>タイトル</p>を作成し、記事一覧に追加していく。
+                    const p = $('<p>', {text: title});
+                    $('#posts').append(p);
+                }
+            });
+        });
+
+
+    </script>
+
+
+{% endblock %}

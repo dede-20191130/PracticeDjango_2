@@ -22,4 +22,5 @@ urlpatterns = [
     path('mybook/', include('mybook.urls')),
     path('api/', include('api.urls')),
     path('blog_api/', include(blog_router.urls)),
+    path('ajax_prac_1/', include('ajax_prac_1.urls')),
 ]

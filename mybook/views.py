@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import ListView
+from setuptools.depends import extract_constant
 
 from mybook.forms import BookForm, ImpressionForm
 from mybook.models import Book, Impression
@@ -49,6 +50,8 @@ class ImpressionList(ListView):
     template_name = 'mybook/impression_list.html'
     paginate_by = 5  # １ページは最大2件ずつでページングする
 
+    # extra_context = None
+
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.object_list = None
@@ -58,6 +61,7 @@ class ImpressionList(ListView):
         impressions = book.impressions.all().order_by('id')  # 書籍の子供の、感想を読む
         self.object_list = impressions
         context = self.get_context_data(object_list=self.object_list, book=book)
+        # ImpressionList.extra_context = {'book': book}
         return self.render_to_response(context)
 
 
